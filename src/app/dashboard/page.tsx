@@ -1,21 +1,19 @@
 'use client';
 import { useBreadcrumb } from '@/context/breadcrumb-context';
-import { Home } from 'lucide-react';
 import React from 'react';
+import { DataTableDemo } from './data-table';
+import { BREADCRUMB_DASHBOARD_ITEMS } from '@/constant/breadcrumb-menulist';
 
 const Page = () => {
   const { breadcrumbChange } = useBreadcrumb();
 
   React.useEffect(() => {
-    breadcrumbChange([
-      { label: 'Home', url: '/', icon: <Home className='size-5' /> },
-    ]);
+    breadcrumbChange(BREADCRUMB_DASHBOARD_ITEMS);
   }, []);
-  
 
   return (
-    <div>
-      <h2>Dashboard Page</h2>
+    <div className="py-10">
+      <DataTableDemo />
     </div>
   );
 };

@@ -1,0 +1,19 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.organizeImports": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "eslint.codeActionsOnSave": {
+    "source.fixAll.eslint": true // For ESLint users
+  },
+  "cSpell.words": [
+    "formik",
+    "lucide",
+    "tanstack",
+    "nprogress",
+    "clsx",
+    "tailwindcss"
+  ]
+}

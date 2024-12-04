@@ -1,8 +1,12 @@
 export const APPLICATION_ROUTERS = {
+    ROOT: "/",
     DASHBOARD: "/dashboard",
+    ACCESS: {
+        FEATURE: "/access/feature",
+        PERMISSION: "/access/permission",
+        ROLES: "/access/roles",
+    },
     CATEGORY: {
-        PERMISSION: "/category/permission",
-        ROLES: "/category/roles",
         DEPARTMENT: "/category/department",
         USER_TAGS: "/category/user-tags",
     },
@@ -32,9 +36,10 @@ export const APPLICATION_ROUTERS = {
     },
     ANNOUNCEMENTS: "/announcements",
     SOCIAL_MEDIA: "/social-media",
+    RECYCLE_BIN: "/recycle-bin",
     OPERATIONS: {
-        CREATE: "create",
-        UPDATE: "update",
+        CREATE: "new",
+        UPDATE: "edit",
         READ: "view",
     },
     NOT_FOUND: "/not-found",

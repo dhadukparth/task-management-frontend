@@ -22,8 +22,12 @@ import Link from 'next/link';
 
 const DynamicBreadcrumb = () => {
   const { breadcrumbs } = useBreadcrumb();
-  const breadcrumbCount = breadcrumbs.length;
 
+  if (!breadcrumbs) {
+    return null;
+  }
+
+  const breadcrumbCount = breadcrumbs.length;
   if (breadcrumbCount === 0) {
     return <BreadcrumbLoader />;
   }
@@ -40,7 +44,6 @@ const DynamicBreadcrumb = () => {
       </BreadcrumbItem>
     </div>
   );
-  
 
   return (
     <Breadcrumb>

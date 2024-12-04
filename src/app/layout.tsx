@@ -3,6 +3,9 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { geistMono, geistSans } from './fonts';
 import AdminLayout from '@/components/layout/AdminLayout';
+import TopLoadingBar from '@/components/custom/loader/top-loading-bar';
+import GraphQlProvider from '@/components/provider/graph-ql';
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +26,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AdminLayout>{children}</AdminLayout>
+          <TopLoadingBar>
+            <GraphQlProvider>
+              <AdminLayout>{children}</AdminLayout>
+              <Toaster />
+            </GraphQlProvider>
+          </TopLoadingBar>
         </ThemeProvider>
       </body>
     </html>

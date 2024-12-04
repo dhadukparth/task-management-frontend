@@ -1,0 +1,22 @@
+1) duplicate name error handling on backend side
+{
+    "data": {
+        "updatePermission": {
+            "status": 11000,
+            "message": "Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task-manager-app.tbl_permissions index: name_1 dup key: { name: \"welcome\" }",
+            "data": null
+        }
+    }
+}
+
+2) change the rollback to restore function name in all controllers
+    example:
+        old: rollBackPermission
+        new: restorePermission
+
+3) add a new parameters on response time
+    example:
+        status      // status code
+        message     // message
+        subText     // message description
+        data        // response data
